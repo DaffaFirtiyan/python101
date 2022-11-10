@@ -11,5 +11,5 @@ def computerGuess(c):
 
     print(f"The computer took {i} guesses")
 
-# computerGuess(int(input("Pick a number between 0 - 10: ")))
-computerGuess(1)
+computerGuess(int(input("Pick a number between 0 - 10: ")))
+# computerGuess(1)

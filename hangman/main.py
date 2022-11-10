@@ -11,7 +11,7 @@ def hangman():
     alphabet = list(string.ascii_lowercase)
     life = 7
 
-    print(*word, sep="")
+    # print(*word, sep="")
 
     for i in range(len(word)):
         known.append("_")
