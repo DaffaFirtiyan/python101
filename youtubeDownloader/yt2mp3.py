@@ -32,4 +32,5 @@ with open(csv_file, newline='') as csvfile:
 
         audio.write_audiofile(output)
 
-        # os.remove(input)
+        vid.close()
+        os.remove(input)
