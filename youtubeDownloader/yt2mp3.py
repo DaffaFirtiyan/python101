@@ -3,6 +3,7 @@ import csv
 from pytube import YouTube
 from moviepy.editor import *
 
+# set up folder if it doesn't exist
 outFolder = "F:\mp3_files"
 if not os.path.exists(outFolder):
     os.mkdir(outFolder)
@@ -13,6 +14,8 @@ csv_file = "youtubeDownloader\youtube_videos.csv"
 # open the csv file and read the video urls
 with open(csv_file, newline='') as csvfile:
     reader = csv.reader(csvfile, delimiter=',')
+
+    # for every video in the csv
     for row in reader:
         url = row[0]
         yt = YouTube(url)
@@ -32,6 +35,7 @@ with open(csv_file, newline='') as csvfile:
 
         audio.write_audiofile(output)
 
+        # closes the function and remove the mp4
         vid.close()
         os.remove(input)
         print("Download complete :)")
